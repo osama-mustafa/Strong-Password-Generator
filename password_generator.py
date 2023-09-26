@@ -84,6 +84,7 @@ def generate_password(password_length: int) -> str:
     password = ''.join(password)
     return password
 
-password_length = get_valid_password_length()
-password = generate_password(password_length)
-print(f"Your Generated Password is: {password}")
+if __name__ == '__main__':
+    password_length = get_valid_password_length()
+    password = generate_password(password_length)
+    print(f"Your Generated Password is: {password}")

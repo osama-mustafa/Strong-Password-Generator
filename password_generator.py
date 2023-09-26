@@ -1,5 +1,16 @@
 import string, random
 
+# Constants for password strength requirements
+
+LETTERS_PERCENT = 30
+# => 30% uppercase letters
+# => 30% lowercase letters
+
+NON_LETTERS_PERCENT = 20
+# => 20% digits
+# => 20% punctuations and special characters
+
+
 def get_valid_password_length() -> int:
 
     while True:
@@ -40,16 +51,8 @@ def generate_password(password_length: int) -> str:
     random.shuffle(digits)
     random.shuffle(punctuations)
 
-    ### The password must meet the following requirements:
-
-    # => 30% uppercase letters
-    # => 30% lowercase letters
-    # => 20% digits
-    # => 20% punctuations and special characters
-
-    password_part_one = round(password_length * (30/100))
-    password_part_two = round(password_length * (20/100))
-
+    password_part_one = round(password_length * (LETTERS_PERCENT/100))
+    password_part_two = round(password_length * (NON_LETTERS_PERCENT/100))
 
     # Append lower & upper case characters to the password
     for i in range(password_part_one):

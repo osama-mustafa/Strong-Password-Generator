@@ -12,7 +12,7 @@ NON_LETTERS_PERCENT = 20
 
 
 def get_valid_password_length() -> int:
-
+    """Get valid password length from user input."""
     while True:
         # Ensure that the user will enter valid integers
         print('Please enter password length:')
@@ -30,13 +30,7 @@ def get_valid_password_length() -> int:
 
 def generate_password(password_length: int) -> str:
 
-    """
-    Description: The method will generate strong password
-    Args: integer
-        password length
-    Returns: string
-        the output password
-    """
+    """Generate random strong password."""
 
     # Prepare all characters, digits, and punctuations as lists
     lowercase_letters   = list(string.ascii_lowercase)

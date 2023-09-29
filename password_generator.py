@@ -29,9 +29,7 @@ def get_valid_password_length() -> int:
     return password_length
 
 def generate_password(password_length: int) -> str:
-
     """Generate random strong password."""
-
     # Prepare all characters, digits, and punctuations as lists
     lowercase_letters   = list(string.ascii_lowercase)
     uppercase_letters   = list(string.ascii_uppercase)
